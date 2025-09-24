@@ -6,6 +6,10 @@ body {
     background: #020024;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 #hero {
     position: relative;
     width: 100%;
@@ -169,13 +173,14 @@ nav li a:hover {
 
 .about-text a {
     text-decoration: none;
-    display: inline-block;
+    display: flex;
     position: absolute;
     top: 115%;
-    width: 14vw;
+    width: 10vw;
     height: 3vw;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding-top: .9vw;
     border-radius: 15px;
     font-weight: bold;
     color: black;
@@ -250,13 +255,13 @@ nav li a:hover {
     left: 5vw
 }
 
-#projects div span a {
+#projects div .text a{
     margin: 8% auto;
     color: white;
     text-decoration: none;
     background: #020024;
-    width: 9vw;
-    height: 3vw;
+    width: 10vw;
+    line-height: 3vw;
     font-size: 1.2vw;
     display: flex;
     justify-content: center;
@@ -284,6 +289,65 @@ nav li a:hover {
 #youtube-project {
     flex-direction: row-reverse;
 }
+
+@media (max-width: 900px) {
+    #projects div {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #projects div img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px 20px 0 0;
+    }
+
+    #projects div span {
+        position: static;
+        border-radius: 0 0 20px 20px;
+        border: #020024 2px solid;
+        font-size: 3vw;
+        padding: 20px 10px;
+    }
+
+    #projects span p {
+        width: 100%;
+        text-align: justify;
+        align-self: center;
+    }
+
+    #projects span .tech {
+        position: static;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+
+    #projects div h1 {
+        font-size: 4vw;
+    }
+
+    #projects div .text a {
+        font-size: 3vw;
+        width: 40vw;
+        height: 6vw;
+        line-height: 6vw;
+    }
+    
+}
+
+@media (min-width:900px) and (max-width:1400px) {
+    #projects div span {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        top: auto;
+        border-radius: 20px;
+        border: #020024 2px solid;
+        font-size: 1.2vw;
+        padding: 20px 20px;
+}
+}   
 
 footer {
     position: relative;
